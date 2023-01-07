@@ -45,7 +45,7 @@ export default {
           // nothing
       },
        next () {
-          this.$http.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=12&regionCode=TW&key=AIzaSyAIp71F01elALgrI4mGwyNnS8RyKP61BeE&pageToken=' + this.posts.nextPageToken)
+          this.$http.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=5&regionCode=BD&key=AIzaSyAIp71F01elALgrI4mGwyNnS8RyKP61BeE&pageToken=' + this.posts.nextPageToken)
             .then( function(response) {
             this.posts = response.body;
             this.items = response.body.items;
@@ -56,7 +56,7 @@ export default {
         })
        },// 下一頁
        prev () {
-          this.$http.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=12&regionCode=TW&key=AIzaSyAIp71F01elALgrI4mGwyNnS8RyKP61BeE&pageToken=' + this.posts.prevPageToken)
+          this.$http.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=5&regionCode=BD&key=AIzaSyAIp71F01elALgrI4mGwyNnS8RyKP61BeE&pageToken=' + this.posts.prevPageToken)
             .then( function(response) {
             this.posts = response.body;
             this.items = response.body.items;
@@ -68,7 +68,7 @@ export default {
        }// 上一頁
     },
     mounted () {        
-        this.$http.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=12&regionCode=TW&key=AIzaSyAIp71F01elALgrI4mGwyNnS8RyKP61BeE')
+        this.$http.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=5&regionCode=BD&key=AIzaSyAIp71F01elALgrI4mGwyNnS8RyKP61BeE')
         .then( function(response) {
             this.posts = response.body;
             this.items = response.body.items;

@@ -9,7 +9,7 @@
           </tr>
           <tr>
             <td> {{ item.snippet.title }} </td>
-            <td> <a :href="'https://youtube.com/watch?v='{{item.id}}">Watch Video</a></td>
+            <td> <a :href="'https://youtube.com/watch?v=' + item.id">Watch Video</a></td>
             <td>  
               <vue-star animate="animated bounceIn" color="#F05654">
                 <a slot="icon.gif" class="fa fa-heart" @click="handleClick"></a>
